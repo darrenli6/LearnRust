@@ -29,17 +29,28 @@ fn main() {
     // size是数组类型的一部分
     let arr: [u32;5] = [1,2,3,4,5];
     println!("arr[0]=  {}",arr[0]);
+     
+    let arr1: [u32;3] = [1,2,3];
+    show(arr1);
 
-    
-    show(arr);
+    // 元组
+    let tup :(i32,f32,char) = (-3,3.34,'年');
+    let tup =  (-3,3.34,'年');
+    println!("{} ",tup.0);
+    println!("{} ",tup.1);
+    println!("{} ",tup.2);
+
+    let (x,y,z) = tup;
+    println!("{}",x);
+    println!("{}",y);
+    println!("{}",z);
  
-
 }
 
 fn show(arr:[u32;3]){
-    println!("------------")
+    println!("------------");
     for i in &arr{
-        println!("{}",i)
+        println!("{}",i);
     }
-    println!("------------")
+    println!("------------");
 }
