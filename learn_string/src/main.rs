@@ -71,9 +71,31 @@ fn main() {
 
     
      let s4= String::from("hello");
-     
+    //  let s41 = s4[0];
+     println!("s4.len = {} " , s4.len());
+  
+     let s4 =String::from("你好");
+     println!("s4.len= {}" , s4.len());
 
 
-    
+
+    let hello = "你好";
+    // slice方式是可以的
+    let h5 = &hello[0..3];
+    println!(" h5 = {} ",h5);
+
+     //thread 'main' panicked at 'byte index 2  is not a char boundary
+
+    // let h6 = &hello[0..2];
+    // println!(" h6 = {} ",h6);
+
+    // chars 
+    for c in s4.chars(){
+        println!("c = {} ",c);
+    }
+
+    for b in s4.bytes(){
+        println!("b = {} ",b);
+    }
     println!("Hello, world!");
 }
